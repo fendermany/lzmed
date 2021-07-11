@@ -538,6 +538,7 @@ body.ie ._ibg img {
 
 .priceBlock {
   padding: 2.5rem 0;
+  line-height: 130%;
   color: #000;
   /* .priceBlock__content */
   /* .priceBlock__title */
@@ -553,7 +554,6 @@ body.ie ._ibg img {
   -moz-text-align-last: left;
        text-align-last: left;
   font-size: 20px;
-  line-height: 130%;
   margin-bottom: 0.625rem;
 }
 
@@ -612,7 +612,6 @@ body.ie ._ibg img {
       grid-template: 1fr/1fr 1fr;
   width: 100%;
   font-size: 16px;
-  line-height: 130%;
   gap: 1.25rem;
 }
 
@@ -654,6 +653,8 @@ body.ie ._ibg img {
 }
 
 .phoneBlock {
+  color: #000;
+  line-height: 130%;
   /* .phoneBlock__content */
   /* .phoneBlock__body */
   /* .phoneBlock__title */
@@ -662,12 +663,118 @@ body.ie ._ibg img {
   /* .phoneBlock__calendar */
 }
 
+.phoneBlock__body {
+  border: 2px solid #009789;
+  border-radius: 10px;
+  padding: 20px 60px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 20px 1fr;
+      grid-template: 1fr/1fr 1fr;
+  gap: 20px;
+}
+
+.phoneBlock__title {
+  margin: 0 0 0 40px;
+  color: #ed1c24;
+  font-family: "Roboto-Bold";
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.phoneBlock__phone {
+  position: relative;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0 0 0 40px;
+  color: #5b1ced;
+  font-family: "Roboto-Bold";
+  font-size: 20px;
+  line-height: 130%;
+}
+
 .phoneBlock__map {
   position: relative;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0 0 0 40px;
+  font-size: 16px;
 }
 
 .phoneBlock__calendar {
   position: relative;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0 0 0 40px;
+  font-size: 16px;
+}
+
+.spollersBlock {
+  padding: 2.5rem 0;
+  color: #000;
+  /* .spollersBlock__content */
+  /* .spollersBlock__wrapper */
+  /* .spollersBlock__item */
+  /* .spollersBlock__title */
+  /* .spollersBlock__body */
+}
+
+.spollersBlock__item {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #949393;
+}
+
+.spollersBlock__title {
+  color: #525252;
+  position: relative;
+  padding: 0 3.75rem 0 0;
+  font-family: "Roboto-Bold";
+  font-size: 18px;
+}
+
+.spollersBlock__title:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #009789;
+  height: 1.25rem;
+  width: 0.125rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 1.1875rem;
+  z-index: 9;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.spollersBlock__title:before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #009789;
+  width: 1.25rem;
+  height: 0.125rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0.625rem;
+  z-index: 9;
+}
+
+.spollersBlock__title._active:after {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+}
+
+.spollersBlock__body {
+  font-size: 16px;
+  padding: 1.25rem 3.75rem 0 0;
 }
 
 .page {
@@ -698,17 +805,60 @@ body.ie ._ibg img {
   .priceBlock__item-price span:last-child {
     font-size: calc(10px + 4 * ((100vw - 320px) / 850));
   }
+
+  .phoneBlock__title {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 850));
+  }
+
+  .phoneBlock__phone {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 850));
+  }
+
+  .phoneBlock__map {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 850));
+  }
+
+  .phoneBlock__calendar {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 850));
+  }
+
+  .spollersBlock__title {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 850));
+  }
+
+  .spollersBlock__body {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 850));
+  }
 }
 
 @media (max-width: 991.98px) {
   ._container {
     max-width: 750px;
   }
+
+  .phoneBlock__body {
+    padding: 20px 40px;
+  }
 }
 
 @media (max-width: 767.98px) {
   ._container {
     max-width: none;
+  }
+
+  .phoneBlock__body {
+    padding: 20px 30px;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 1fr/1fr;
+  }
+
+  .phoneBlock__title {
+    margin: 0 0 0 10px;
+  }
+
+  .spollersBlock {
+    padding: 1.25rem 0;
   }
 }
 
@@ -719,5 +869,9 @@ body.ie ._ibg img {
 
   .priceBlock__body {
     padding: 1.25rem 0 1.25rem 2.4rem;
+  }
+
+  .phoneBlock__body {
+    padding: 10px 20px;
   }
 }
