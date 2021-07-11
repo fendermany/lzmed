@@ -712,6 +712,7 @@ body.ie ._ibg img {
 
 .spollersBlock {
   padding: 2.5rem 0;
+  line-height: 130%;
   color: #000;
   /* .spollersBlock__content */
   /* .spollersBlock__wrapper */
