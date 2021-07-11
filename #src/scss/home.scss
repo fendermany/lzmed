@@ -1,0 +1,132 @@
+// PRICE BLOCK ====================================================================================================
+.priceBlock {
+	padding: 2.5rem 0;
+	color: #000;
+	@media (max-width:$md4+px){
+		 padding: 1.25rem  0;
+	}
+
+	/* .priceBlock__content */
+	&__content {}
+
+	/* .priceBlock__title */
+	&__title {
+		font-family: 'Roboto-Bold';
+		text-align-last: left;
+		@include adaptiv-font(20,16,1);
+		line-height: 130%;
+		margin-bottom: .625rem;
+
+	}
+
+	/* .priceBlock__body */
+	&__body {
+		padding: 1.25rem 0 1.25rem 2.8125rem;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		@media (max-width:$md4+px){
+			padding: 1.25rem 0 1.25rem 2.4rem;
+		}
+		&::after {
+			content: '';
+			height: .125rem;
+			width: 100%;
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			background: $mainColor;
+		}
+
+		&::before {
+			content: '';
+			height: .125rem;
+			width: 100%;
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			background: $mainColor;
+		}
+	}
+
+	/* .priceBlock__item */
+	&__item {
+		padding: .625rem 0;
+		display: grid;
+		grid-template: 1fr / 1fr 1fr;
+		width: 100%;
+		@include adaptiv-font(16,12,1);
+		line-height: 130%;
+		gap: 1.25rem;
+		@media (max-width:$md4+px){
+			 
+		}
+	}
+
+	/* .priceBlock__item-price */
+	&__item-price {
+		color: $mainColor;
+		font-family: 'Roboto-Bold';
+		@include adaptiv-font(18,14,1);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		span:last-child{
+			@include adaptiv-font(14,10,1);
+			font-family: 'Roboto-Light';
+		}
+	}
+
+	/* .priceBlock__item-property */
+	&__item-property {
+		position: relative;
+		align-self: flex-start;
+		font-family: 'Roboto-Bold';
+		
+	}
+
+	/* .priceBlock__item-value */
+	&__item-value {
+		align-self: center;
+	}
+
+}
+
+// PHONE BLOCK ====================================================================================================
+
+.phoneBlock {
+	/* .phoneBlock__content */
+	&__content {
+	}
+	/* .phoneBlock__body */
+	&__body {
+	}
+	/* .phoneBlock__title */
+	&__title {
+	}
+	/* .phoneBlock__phone */
+	&__phone {
+	}
+	/* .phoneBlock__map */
+	&__map {
+		position: relative;
+	}
+	/* .phoneBlock__calendar */
+	&__calendar {
+		position: relative;
+	}
+}
+
+
+
+
+
+
+
